@@ -17,10 +17,14 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = translations[locale];
-const localizedSkills = skillGroups.map((group, index) => ({
-  ...group,
-  title: t.expertise.groups[index] ?? group.title,
-}));
+const localizedSkills = skillGroups.map((group, index) => {
+  const translation = locale === "en" ? undefined : group.translations[locale];
+  return {
+    ...group,
+    title: translation?.title ?? t.expertise.groups[index] ?? group.title,
+    skills: translation?.skills ?? group.skills,
+  };
+});
 const localizedEducation = education.map((item) => ({
   ...item,
   qualification: item.key === "dess" ? t.education.dess : t.education.computerScience,
@@ -35,7 +39,7 @@ const localizedEducation = education.map((item) => ({
     <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow hero-kicker"><span class="status-dot"></span>{t.hero.role}<span class="eyebrow-divider">/</span>{t.hero.location}</p>
-        <h1 id="hero-title">{locale === "en" ? <>Building Digital Experiences Through <span>Code &amp; Creativity.</span></> : locale === "fr" ? <>Créer des expériences numériques grâce au <span>code et à la créativité.</span></> : <>Construiesc experiențe digitale prin <span>cod și creativitate.</span></>}</h1>
+        <h1 id="hero-title">{locale === "en" ? <>I Build Digital Experiences Through <span>Code &amp; Creativity.</span></> : locale === "fr" ? <>Je crée des expériences numériques grâce au <span>code et à la créativité.</span></> : <>Creez experiențe digitale prin <span>cod și creativitate.</span></>}</h1>
         <p class="hero-subtitle">{t.hero.subtitle}</p>
         <p class="hero-intro">{t.hero.introduction}</p>
         <div class="hero-actions">
@@ -111,7 +115,7 @@ const localizedEducation = education.map((item) => ({
           </div>
           <div class="about-side-note">
             <span class="side-note-mark" aria-hidden="true">{profile.initials}</span>
-            <span>{profile.experience}<br />{t.about.experience}</span>
+            <span>{t.about.ownership}<br />{profile.experience} {t.about.experience}</span>
           </div>
         </div>
         <div class="journey" aria-label={t.about.journeyLabel}>
