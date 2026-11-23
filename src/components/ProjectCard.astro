@@ -1,0 +1,43 @@
+---
+import type { Project } from "../data/projects";
+import type { Locale, Translation } from "../i18n/translations";
+
+interface Props {
+  project: Project;
+  index: number;
+  locale: Locale;
+  categoryLabel: string;
+  t: Translation;
+}
+
+const { project, index, locale, categoryLabel, t } = Astro.props;
+const localizedProject = project.translations?.[locale] ?? project;
+---
+
+<article class="project-card">
+  <div class="project-image">
+    {project.image ? (
+      <img src={project.image} alt={project.imageAlt ?? ""} loading="lazy" />
+    ) : (
+      <div class="project-art" aria-hidden="true">
+        <span class="project-art-index">N° {String(index + 1).padStart(2, "0")}</span>
+        <span class="project-art-shape"></span>
+        <span class="project-art-label">{categoryLabel}</span>
+      </div>
+    )}
+    <span class="project-category">{categoryLabel}</span>
+  </div>
+  <div class="project-details">
+    <div>
+      <h3>{localizedProject.title}</h3>
+      <p>{localizedProject.description}</p>
+    </div>
+    <ul class="project-tech" aria-label="Technologies">
+      {project.technologies.map((technology) => <li>{technology}</li>)}
+    </ul>
+    <div class="project-links">
+      {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer">{t.projects.liveSite} <span aria-hidden="true">↗</span></a>}
+      {project.repositoryUrl && <a href={project.repositoryUrl} target="_blank" rel="noreferrer">{t.projects.sourceCode} <span aria-hidden="true">↗</span></a>}
+    </div>
+  </div>
+</article>

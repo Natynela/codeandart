@@ -1,0 +1,21 @@
+---
+import { profile } from "../data/profile";
+import { translations, type Locale } from "../i18n/translations";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+---
+
+<footer class="site-footer">
+  <a class="brand footer-brand" href="#top">
+    <span class="brand-mark" aria-hidden="true">{profile.initials}</span>
+    <span>{profile.name}</span>
+  </a>
+  <span class="footer-note">{t.footer.note} {profile.location}.</span>
+  <span class="footer-copy">© {new Date().getFullYear()} {profile.name}</span>
+  <a class="back-to-top" href="#top">{t.footer.backToTop} ↑</a>
+</footer>

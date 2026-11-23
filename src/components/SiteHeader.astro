@@ -1,0 +1,49 @@
+---
+import { profile } from "../data/profile";
+import { translations, locales, type Locale } from "../i18n/translations";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+const localeHref = (target: Locale) =>
+  `${import.meta.env.BASE_URL}${target === "en" ? "" : `${target}/`}`;
+---
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label={`${profile.name}, home`}>
+    <span class="brand-mark" aria-hidden="true">{profile.initials}</span>
+    <span>{profile.name}</span>
+  </a>
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+    aria-label={t.navigation.open}
+    data-open-label={t.navigation.open}
+    data-close-label={locale === "fr" ? "Fermer la navigation" : locale === "ro" ? "Închide meniul" : "Close navigation"}
+  >
+    <span></span><span></span>
+  </button>
+  <nav class="site-nav" id="primary-navigation" aria-label={t.navigation.label}>
+    <a href="#projects">{t.navigation.projects}</a>
+    <a href="#about">{t.navigation.about}</a>
+    <a href="#expertise">{t.navigation.expertise}</a>
+    <a class="nav-cta" href="#contact">{t.navigation.contact} <span aria-hidden="true">↗</span></a>
+  </nav>
+  <nav class="language-switcher" aria-label={t.navigation.language}>
+    {locales.map((target) => (
+      <a
+        href={localeHref(target)}
+        lang={target}
+        aria-current={target === locale ? "page" : undefined}
+        aria-label={translations[target].language}
+      >
+        {target.toUpperCase()}
+      </a>
+    ))}
+  </nav>
+</header>

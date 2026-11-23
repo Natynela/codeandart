@@ -1,0 +1,203 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "./ProjectCard.astro";
+import SectionHeading from "./SectionHeading.astro";
+import SiteFooter from "./SiteFooter.astro";
+import SiteHeader from "./SiteHeader.astro";
+import SkillGroup from "./SkillGroup.astro";
+import { education } from "../data/education";
+import { profile } from "../data/profile";
+import { projectCategories, projects } from "../data/projects";
+import { skillGroups } from "../data/skills";
+import { translations, type Locale } from "../i18n/translations";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = translations[locale];
+const localizedSkills = skillGroups.map((group, index) => ({
+  ...group,
+  title: t.expertise.groups[index] ?? group.title,
+}));
+const localizedEducation = education.map((item) => ({
+  ...item,
+  qualification: item.key === "dess" ? t.education.dess : t.education.computerScience,
+}));
+---
+
+<BaseLayout locale={locale}>
+  <a class="skip-link" href="#main">{t.skip}</a>
+  <SiteHeader locale={locale} />
+
+  <main id="main">
+    <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-kicker"><span class="status-dot"></span>{t.hero.role}<span class="eyebrow-divider">/</span>{t.hero.location}</p>
+        <h1 id="hero-title">{locale === "en" ? <>Building Digital Experiences Through <span>Code &amp; Creativity.</span></> : locale === "fr" ? <>Créer des expériences numériques grâce au <span>code et à la créativité.</span></> : <>Construiesc experiențe digitale prin <span>cod și creativitate.</span></>}</h1>
+        <p class="hero-subtitle">{t.hero.subtitle}</p>
+        <p class="hero-intro">{t.hero.introduction}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">{t.hero.viewWork} <span aria-hidden="true">↓</span></a>
+          <a class="button button-outline" href="#contact">{t.hero.contact} <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="availability"><span class="availability-mark" aria-hidden="true">✳</span>{t.hero.availability}</p>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label={t.hero.visualLabel}>
+        <div class="hero-grid"></div>
+        <span class="visual-caption caption-top">{t.hero.visualTop}</span>
+        <div class="visual-orbit orbit-outer"></div>
+        <div class="visual-orbit orbit-inner"></div>
+        <div class="visual-disc"><span>{t.hero.make}<br />{t.hero.it}<br /><em>{t.hero.matter}</em></span></div>
+        <span class="visual-spark spark-one" aria-hidden="true">✳</span>
+        <span class="visual-spark spark-two" aria-hidden="true">✳</span>
+        <span class="visual-caption caption-bottom">{t.hero.visualBottom}</span>
+        <span class="visual-stamp">{t.hero.stampTop}<br />{t.hero.stampBottom}</span>
+      </div>
+      <a class="scroll-cue" href="#projects"><span></span>{t.hero.scroll}</a>
+    </section>
+
+    <section class="project-section section-pad" id="projects" aria-labelledby="projects-title">
+      <div class="page-wrap">
+        <SectionHeading number="01" label={t.projects.section} />
+        <div class="section-intro project-intro">
+          <h2 id="projects-title">{t.projects.title}<br /><em>{t.projects.accent}</em></h2>
+          <p>{t.projects.introduction}</p>
+        </div>
+        <ul class="category-list" aria-label={t.projects.categoriesLabel}>
+          {projectCategories.map((_, index) => <li>{t.projects.categories[index]}</li>)}
+        </ul>
+
+        {projects.length > 0 ? (
+          <div class="project-grid">
+            {projects.map((project, index) => (
+              <ProjectCard
+                project={project}
+                index={index}
+                locale={locale}
+                categoryLabel={t.projects.categories[projectCategories.indexOf(project.category)] ?? project.category}
+                t={t}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="projects-empty">
+            <div class="empty-art" aria-hidden="true">
+              <span class="empty-art-ring"></span>
+              <span class="empty-art-core">{t.projects.work}<br />{t.projects.progress}</span>
+              <span class="empty-art-index">{t.projects.artLabel}</span>
+            </div>
+            <div class="empty-copy">
+              <span class="mono-label">{t.projects.noteLabel}</span>
+              <h3>{t.projects.emptyTitle}<br /><em>{t.projects.emptyAccent}</em></h3>
+              <p>{t.projects.emptyDescription}</p>
+              <a class="text-link" href="#contact">{t.projects.conversation} <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="page-wrap">
+        <SectionHeading number="02" label={t.about.section} />
+        <div class="about-layout">
+          <h2 id="about-title">{t.about.title}<br /><em>{t.about.accent}</em></h2>
+          <div class="about-copy">
+            <p>{t.about.evolution}</p>
+            <p class="about-signoff">{t.about.signoff}</p>
+          </div>
+          <div class="about-side-note">
+            <span class="side-note-mark" aria-hidden="true">{profile.initials}</span>
+            <span>{profile.experience}<br />{t.about.experience}</span>
+          </div>
+        </div>
+        <div class="journey" aria-label={t.about.journeyLabel}>
+          <div><span>01</span><strong>{t.about.physics}</strong></div>
+          <span class="journey-arrow" aria-hidden="true">→</span>
+          <div><span>02</span><strong>{t.about.computerScience}</strong></div>
+          <span class="journey-arrow" aria-hidden="true">→</span>
+          <div class="journey-current"><span>03</span><strong>{t.about.ecommerce}</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise-section section-pad" id="expertise" aria-labelledby="expertise-title">
+      <div class="page-wrap">
+        <SectionHeading number="03" label={t.expertise.section} />
+        <div class="section-intro">
+          <h2 id="expertise-title">{t.expertise.title}<br /><em>{t.expertise.accent}</em></h2>
+          <p>{t.expertise.introduction}</p>
+        </div>
+        <div class="skills-grid">
+          {localizedSkills.map((group, index) => <SkillGroup group={group} index={index} />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section section-pad" id="education" aria-labelledby="education-title">
+      <div class="page-wrap education-layout">
+        <div>
+          <SectionHeading number="04" label={t.education.section} />
+          <h2 id="education-title">{t.education.title}<br /><em>{t.education.accent}</em></h2>
+        </div>
+        <div class="education-list">
+          {localizedEducation.map((item, index) => (
+            <article class="education-item">
+              <span class="education-number">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{item.qualification}</h3>
+                {item.institution && <p>{item.institution}</p>}
+              </div>
+              <span class="education-mark" aria-hidden="true">↗</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="qualities-section section-pad" id="qualities" aria-labelledby="qualities-title">
+      <div class="page-wrap">
+        <SectionHeading number="05" label={t.qualities.section} />
+        <div class="section-intro">
+          <h2 id="qualities-title">{t.qualities.title}<br /><em>{t.qualities.accent}</em></h2>
+          <p>{t.qualities.introduction}</p>
+        </div>
+        <div class="qualities-grid">
+          {t.qualities.items.map((quality, index) => (
+            <article class="quality-item">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{quality.title}</h3>
+              <p>{quality.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="page-wrap contact-layout">
+        <div>
+          <SectionHeading number="06" label={t.contact.section} />
+          <h2 id="contact-title">{t.contact.title}<br /><em>{t.contact.accent}</em></h2>
+        </div>
+        <div class="contact-copy">
+          <p>{t.contact.introduction}</p>
+          <p class="shopify-experience">{t.contact.shopifyExperience}</p>
+          <div class="contact-links">
+            {profile.email && <a class="contact-link" href={`mailto:${profile.email}`}>{t.contact.email} <span aria-hidden="true">↗</span></a>}
+            {profile.socialLinks.filter((link) => link.href).map((link) => (
+              <a class="contact-link" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>
+            ))}
+          </div>
+          {!profile.email && <p class="contact-note">{t.contact.linkedinNote}</p>}
+        </div>
+      </div>
+      <div class="contact-watermark" aria-hidden="true">LET’S BUILD SOMETHING GOOD</div>
+    </section>
+  </main>
+
+  <SiteFooter locale={locale} />
+</BaseLayout>
