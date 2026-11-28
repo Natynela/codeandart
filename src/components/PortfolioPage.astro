@@ -17,6 +17,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = translations[locale];
+const linkedinUrl = profile.socialLinks.find((link) => link.label === "LinkedIn")?.href;
 const localizedSkills = skillGroups.map((group, index) => {
   const translation = locale === "en" ? undefined : group.translations[locale];
   return {
@@ -107,18 +108,16 @@ const localizedEducation = education.map((item) => ({
           <div class="about-copy">
             <p>{t.about.evolution}</p>
             <p class="about-signoff">{t.about.signoff}</p>
+            {linkedinUrl && (
+              <a class="about-link" href={linkedinUrl} target="_blank" rel="noreferrer">
+                {t.about.linkedin} <span aria-hidden="true">↗</span>
+              </a>
+            )}
           </div>
           <div class="about-side-note">
             <span class="side-note-mark" aria-hidden="true">{profile.initials}</span>
             <span>{t.about.ownership}<br />{profile.experience} {t.about.experience}</span>
           </div>
-        </div>
-        <div class="journey" aria-label={t.about.journeyLabel}>
-          <div><span>01</span><strong>{t.about.physics}</strong></div>
-          <span class="journey-arrow" aria-hidden="true">→</span>
-          <div><span>02</span><strong>{t.about.computerScience}</strong></div>
-          <span class="journey-arrow" aria-hidden="true">→</span>
-          <div class="journey-current"><span>03</span><strong>{t.about.ecommerce}</strong></div>
         </div>
       </div>
     </section>
