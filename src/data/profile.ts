@@ -3,7 +3,7 @@ export const profile = {
   initials: "NJ",
   location: "Canada",
   experience: "8+ years",
-  email: "",
+  email: "natajabinschi@gmail.com",
   socialLinks: [
     {
       label: "LinkedIn",
