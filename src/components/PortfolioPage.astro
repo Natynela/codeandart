@@ -47,7 +47,6 @@ const localizedEducation = education.map((item) => ({
           <a class="button button-primary" href="#projects">{t.hero.viewWork} <span aria-hidden="true">↓</span></a>
           <a class="button button-outline" href="#contact">{t.hero.contact} <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="availability"><span class="availability-mark" aria-hidden="true">✳</span>{t.hero.availability}</p>
       </div>
 
       <div class="hero-visual" role="img" aria-label={t.hero.visualLabel}>
@@ -183,17 +182,14 @@ const localizedEducation = education.map((item) => ({
         </div>
         <div class="contact-copy">
           <p>{t.contact.introduction}</p>
-          <p class="shopify-experience">{t.contact.shopifyExperience}</p>
           <div class="contact-links">
             {profile.email && <a class="contact-link" href={`mailto:${profile.email}`}>{t.contact.email} <span aria-hidden="true">↗</span></a>}
             {profile.socialLinks.filter((link) => link.href).map((link) => (
               <a class="contact-link" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>
             ))}
           </div>
-          {!profile.email && <p class="contact-note">{t.contact.linkedinNote}</p>}
         </div>
       </div>
-      <div class="contact-watermark" aria-hidden="true">LET’S BUILD SOMETHING GOOD</div>
     </section>
   </main>
 

@@ -26,7 +26,6 @@ export const translations = {
         "I develop modern web solutions that combine technical precision, thoughtful design, and meaningful user experiences.",
       viewWork: "View My Work",
       contact: "Contact Me",
-      availability: "I’m available on request",
       visualLabel: "A crafted abstract composition representing connected digital experiences",
       visualTop: "CODE & ART / 01",
       make: "I MAKE",
@@ -126,12 +125,8 @@ export const translations = {
       section: "Get in touch",
       title: "Have something",
       accent: "good in mind?",
-      introduction:
-        "I’m always glad to hear about thoughtful projects and collaborations. I bring more than eight years of web development experience, including Shopify and e-commerce work.",
-      shopifyExperience:
-        "I work with Shopify, WordPress, and WooCommerce, and I build front-end and back-end features, integrations, and site improvements.",
+      introduction: "Let’s talk about your next web or e-commerce project.",
       email: "Email",
-      linkedinNote: "LinkedIn is the best way to reach me for now.",
     },
     footer: {
       note: "I designed and developed this portfolio.",
@@ -162,7 +157,6 @@ export const translations = {
         "Je crée des solutions web modernes qui allient rigueur technique, design réfléchi et expériences utiles.",
       viewWork: "Voir mes projets",
       contact: "Me contacter",
-      availability: "Je suis disponible sur demande",
       visualLabel: "Composition abstraite évoquant des expériences numériques connectées",
       visualTop: "CODE & ART / 01",
       make: "JE CRÉE",
@@ -262,12 +256,8 @@ export const translations = {
       section: "Contact",
       title: "Un projet en",
       accent: "tête ?",
-      introduction:
-        "J’aime échanger autour de projets réfléchis et de collaborations. J’apporte plus de huit ans d’expérience en développement web, notamment sur Shopify et en e-commerce.",
-      shopifyExperience:
-        "Je travaille avec Shopify, WordPress et WooCommerce, et je développe des fonctionnalités front-end et back-end, des intégrations et des améliorations de sites.",
+      introduction: "Parlons de votre prochain projet web ou e-commerce.",
       email: "Courriel",
-      linkedinNote: "LinkedIn est le meilleur moyen de me joindre pour le moment.",
     },
     footer: {
       note: "J’ai conçu et développé ce portfolio.",
@@ -298,7 +288,6 @@ export const translations = {
         "Dezvolt soluții web moderne care îmbină precizia tehnică, designul atent și experiențe utile.",
       viewWork: "Vezi proiectele",
       contact: "Contactează-mă",
-      availability: "Sunt disponibilă la cerere",
       visualLabel: "Compoziție abstractă ce reprezintă experiențe digitale conectate",
       visualTop: "CODE & ART / 01",
       make: "EU CREEZ",
@@ -398,12 +387,8 @@ export const translations = {
       section: "Contact",
       title: "Ai un proiect",
       accent: "în minte?",
-      introduction:
-        "Mă bucur să discut despre proiecte bine gândite și colaborări. Aduc peste opt ani de experiență în dezvoltare web, inclusiv în Shopify și e-commerce.",
-      shopifyExperience:
-        "Lucrez cu Shopify, WordPress și WooCommerce și dezvolt funcționalități front-end și back-end, integrări și îmbunătățiri pentru site-uri.",
+      introduction: "Hai să vorbim despre următorul tău proiect web sau e-commerce.",
       email: "E-mail",
-      linkedinNote: "Deocamdată, cel mai simplu mă poți contacta pe LinkedIn.",
     },
     footer: {
       note: "Am conceput și dezvoltat acest portofoliu.",

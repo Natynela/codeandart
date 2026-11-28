@@ -325,20 +325,6 @@ h3 {
   background: rgb(197 138 112 / 10%);
 }
 
-.availability {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin: 25px 0 0;
-  color: var(--muted);
-  font-size: 10px;
-}
-
-.availability-mark {
-  color: var(--terracotta);
-  font-size: 13px;
-}
-
 .hero-visual {
   position: relative;
   width: min(100%, 465px);
@@ -1033,6 +1019,10 @@ h3 {
   color: var(--ivory);
 }
 
+.contact-section.section-pad {
+  padding-block: 76px;
+}
+
 .contact-section .section-heading .eyebrow {
   color: #d2e0d9;
 }
@@ -1050,28 +1040,21 @@ h3 {
   z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr 0.75fr;
-  align-items: end;
-  gap: 12%;
+  align-items: center;
+  gap: 8%;
 }
 
 .contact-layout h2 {
-  margin-top: 42px;
+  margin-top: 25px;
   font-size: clamp(46px, 6vw, 72px);
 }
 
 .contact-copy > p {
   max-width: 340px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   color: #e0e9e3;
   font-size: 14px;
-  line-height: 1.85;
-}
-
-.contact-copy > .shopify-experience {
-  padding-left: 12px;
-  border-left: 2px solid #d8a38b;
-  color: #f0dfd5;
-  font-size: 13px;
+  line-height: 1.6;
 }
 
 .contact-links {
@@ -1086,7 +1069,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  padding: 12px 13px;
+  padding: 9px 11px;
   border: 1px solid rgb(245 242 234 / 35%);
   color: var(--ivory);
   font-size: 12px;
@@ -1097,24 +1080,6 @@ h3 {
 .contact-link:hover {
   background: var(--ivory);
   color: var(--navy);
-}
-
-.contact-note {
-  margin-top: 12px;
-  color: #d2e0d9;
-  font-size: 9px;
-}
-
-.contact-watermark {
-  position: absolute;
-  right: 4%;
-  bottom: -31px;
-  color: rgb(245 242 234 / 7%);
-  font-family: var(--heading);
-  font-size: clamp(38px, 9vw, 120px);
-  font-weight: 700;
-  letter-spacing: -0.09em;
-  white-space: nowrap;
 }
 
 .site-footer {
@@ -1447,22 +1412,20 @@ h3 {
 
   .contact-layout {
     grid-template-columns: 1fr;
-    gap: 29px;
+    gap: 20px;
   }
 
   .contact-layout h2 {
-    margin-top: 31px;
+    margin-top: 24px;
     font-size: clamp(45px, 12vw, 63px);
+  }
+
+  .contact-section.section-pad {
+    padding-block: 64px;
   }
 
   .contact-copy > p {
     font-size: 13px;
-  }
-
-  .contact-watermark {
-    right: 0;
-    bottom: -13px;
-    font-size: 45px;
   }
 
   .site-footer {
