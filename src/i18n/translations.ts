@@ -86,8 +86,13 @@ export const translations = {
       section: "Education",
       title: "My foundation",
       accent: "for the work.",
-      dess: "D.E.S.S. in E-commerce",
-      computerScience: "Bachelor’s Degree in Computer Science",
+      qualifications: {
+        mastersPhysicsTechnology: "Master’s in Physics and Technology",
+        bachelorComputerScience: "Bachelor’s Degree in Computer Science",
+        aecTransactionalWebDevelopment: "AEC in Transactional Website Development",
+        certificateAppliedComputerScience: "Certificate in Applied Computer Science",
+        dessEcommerce: "D.E.S.S. in E-commerce",
+      },
     },
     qualities: {
       section: "How I work",
@@ -217,8 +222,13 @@ export const translations = {
       section: "Formation",
       title: "Ma formation",
       accent: "au service de mes projets.",
-      dess: "D.E.S.S. en commerce électronique",
-      computerScience: "Baccalauréat en informatique",
+      qualifications: {
+        mastersPhysicsTechnology: "Maîtrise en physique et technologie",
+        bachelorComputerScience: "Baccalauréat en informatique",
+        aecTransactionalWebDevelopment: "AEC en développement de sites Web transactionnels",
+        certificateAppliedComputerScience: "Certificat en informatique appliquée",
+        dessEcommerce: "D.E.S.S. en commerce électronique",
+      },
     },
     qualities: {
       section: "Ma façon de travailler",
@@ -348,8 +358,13 @@ export const translations = {
       section: "Studii",
       title: "Formarea mea",
       accent: "stă la baza muncii mele.",
-      dess: "D.E.S.S. în comerț electronic",
-      computerScience: "Licență în informatică",
+      qualifications: {
+        mastersPhysicsTechnology: "Master în fizică și tehnologie",
+        bachelorComputerScience: "Licență în informatică",
+        aecTransactionalWebDevelopment: "AEC în dezvoltarea site-urilor web tranzacționale",
+        certificateAppliedComputerScience: "Certificat în informatică aplicată",
+        dessEcommerce: "D.E.S.S. în comerț electronic",
+      },
     },
     qualities: {
       section: "Cum lucrez",

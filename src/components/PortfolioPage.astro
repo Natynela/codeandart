@@ -28,7 +28,7 @@ const localizedSkills = skillGroups.map((group, index) => {
 });
 const localizedEducation = education.map((item) => ({
   ...item,
-  qualification: item.key === "dess" ? t.education.dess : t.education.computerScience,
+  qualification: t.education.qualifications[item.key],
 }));
 ---
 

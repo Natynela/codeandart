@@ -1,18 +1,32 @@
 export interface Education {
-  key: "dess" | "computerScience";
-  qualification: string;
+  key:
+    | "mastersPhysicsTechnology"
+    | "bachelorComputerScience"
+    | "aecTransactionalWebDevelopment"
+    | "certificateAppliedComputerScience"
+    | "dessEcommerce";
   institution: string;
 }
 
 export const education: Education[] = [
   {
-    key: "dess",
-    qualification: "D.E.S.S. in E-commerce",
-    institution: "HEC Montréal",
+    key: "mastersPhysicsTechnology",
+    institution: "",
   },
   {
-    key: "computerScience",
-    qualification: "Bachelor’s Degree in Computer Science",
+    key: "bachelorComputerScience",
     institution: "",
+  },
+  {
+    key: "aecTransactionalWebDevelopment",
+    institution: "",
+  },
+  {
+    key: "certificateAppliedComputerScience",
+    institution: "",
+  },
+  {
+    key: "dessEcommerce",
+    institution: "HEC Montréal",
   },
 ];
