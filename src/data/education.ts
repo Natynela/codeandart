@@ -10,11 +10,11 @@ export interface Education {
 
 export const education: Education[] = [
   {
-    key: "mastersPhysicsTechnology",
+    key: "bachelorComputerScience",
     institution: "",
   },
   {
-    key: "bachelorComputerScience",
+    key: "mastersPhysicsTechnology",
     institution: "",
   },
   {

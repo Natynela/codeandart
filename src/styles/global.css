@@ -940,7 +940,7 @@ h3 {
 
 .education-item {
   display: grid;
-  grid-template-columns: 35px 1fr 20px;
+  grid-template-columns: 35px 1fr;
   align-items: center;
   gap: 12px;
   padding: 25px 0;
@@ -965,12 +965,6 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: 11px;
-}
-
-.education-mark {
-  align-self: start;
-  color: var(--petrol);
-  font-size: 16px;
 }
 
 .qualities-section {
@@ -1383,7 +1377,7 @@ h3 {
   }
 
   .education-item {
-    grid-template-columns: 29px 1fr 17px;
+    grid-template-columns: 29px 1fr;
     gap: 9px;
     padding-block: 19px;
   }

@@ -4,9 +4,9 @@ export type Locale = (typeof locales)[number];
 export const translations = {
   en: {
     language: "English",
-    title: "Web Developer",
+    title: "Web & E-commerce Specialist",
     description:
-      "I’m Natalia Jabinschi, a web developer with 8+ years of experience creating thoughtful digital experiences, e-commerce platforms, and web solutions.",
+      "Natalia Jabinschi is a web and e-commerce specialist with 8+ years of experience building and improving digital experiences.",
     skip: "Skip to content",
     navigation: {
       label: "Main navigation",
@@ -19,11 +19,12 @@ export const translations = {
       open: "Open navigation",
     },
     hero: {
-      role: "Web Developer",
+      role: "Web & E-commerce Specialist",
       location: "Canada",
-      subtitle: "Web Developer | E-commerce | Digital Experience",
-      introduction:
-        "I develop modern web solutions that combine technical precision, thoughtful design, and meaningful user experiences.",
+      title: "Web & E-commerce",
+      titleAccent: "Development Specialist",
+      subtitle: "Web development | E-commerce | Digital experience",
+      introduction: "I build and improve websites with a focus on usability, performance, and business needs.",
       viewWork: "View My Work",
       contact: "Contact Me",
       visualLabel: "A crafted abstract composition representing connected digital experiences",
@@ -38,10 +39,9 @@ export const translations = {
     },
     projects: {
       section: "Selected work",
-      title: "A few projects",
-      accent: "I developed.",
-      introduction:
-        "Thoughtful websites built for businesses and their customers.",
+      title: "Selected",
+      accent: "web projects.",
+      introduction: "A selection of websites created for businesses across different industries.",
       work: "WORK",
       progress: "progress",
       artLabel: "PROJECTS / PORTFOLIO",
@@ -57,22 +57,22 @@ export const translations = {
       technologies: "Technologies used",
     },
     about: {
-      section: "A little about me",
-      title: "I Bring Curiosity",
-      accent: "to my craft.",
+      section: "Professional profile",
+      title: "Web and e-commerce",
+      accent: "specialist.",
       evolution:
-        "I’ve built my career across web development, e-commerce, and digital experiences. I enjoy understanding how things work and how people use them, then turning that insight into useful digital solutions. I keep learning and move comfortably between technical detail and the bigger picture.",
-      signoff: "I bring different perspectives, practical solutions, and a human approach.",
+        "I’m a web developer with more than eight years of experience, specializing in e-commerce and digital experiences. I build and improve websites, connecting technical implementation with usability and business goals.",
+      signoff: "From planning to delivery, I focus on clear, dependable solutions.",
       linkedin: "View my LinkedIn profile",
       experience: "building for the web",
       ownership: "My portfolio",
     },
     expertise: {
       section: "Expertise",
-      title: "My toolkit.",
-      accent: "Always evolving.",
+      title: "Web development",
+      accent: "& e-commerce.",
       introduction:
-        "From the front end to the systems behind it, I enjoy bringing the whole experience together.",
+        "Experience spanning front-end, back-end, e-commerce platforms, and digital project delivery.",
       groups: [
         "Frontend",
         "Backend",
@@ -84,8 +84,8 @@ export const translations = {
     },
     education: {
       section: "Education",
-      title: "My foundation",
-      accent: "for the work.",
+      title: "Education",
+      accent: "& training.",
       qualifications: {
         mastersPhysicsTechnology: "Master’s in Physics and Technology",
         bachelorComputerScience: "Bachelor’s Degree in Computer Science",
@@ -95,10 +95,10 @@ export const translations = {
       },
     },
     qualities: {
-      section: "How I work",
-      title: "Good work is",
-      accent: "good thinking.",
-      introduction: "I bring these qualities to every project, alongside my technical experience.",
+      section: "Working approach",
+      title: "Thoughtful,",
+      accent: "reliable delivery.",
+      introduction: "A practical, collaborative approach to solving problems and delivering quality work.",
       items: [
         {
           title: "Analytical Thinking",
@@ -128,9 +128,9 @@ export const translations = {
     },
     contact: {
       section: "Get in touch",
-      title: "Have something",
-      accent: "good in mind?",
-      introduction: "Let’s talk about your next web or e-commerce project.",
+      title: "Let’s discuss",
+      accent: "your next project.",
+      introduction: "Get in touch to discuss a web or e-commerce project.",
       email: "Email",
     },
     footer: {
@@ -140,9 +140,9 @@ export const translations = {
   },
   fr: {
     language: "Français",
-    title: "Développeuse web",
+    title: "Spécialiste web et e-commerce",
     description:
-      "Je suis Natalia Jabinschi, développeuse web avec plus de 8 ans d’expérience en création d’expériences numériques, de plateformes e-commerce et de solutions web.",
+      "Natalia Jabinschi est spécialiste en développement web et e-commerce, avec plus de 8 ans d’expérience dans la création et l’amélioration d’expériences numériques.",
     skip: "Aller au contenu",
     navigation: {
       label: "Navigation principale",
@@ -155,11 +155,12 @@ export const translations = {
       open: "Ouvrir la navigation",
     },
     hero: {
-      role: "Développeuse web",
+      role: "Spécialiste web et e-commerce",
       location: "Canada",
+      title: "Spécialiste en développement",
+      titleAccent: "web et e-commerce",
       subtitle: "Développement web | E-commerce | Expérience numérique",
-      introduction:
-        "Je crée des solutions web modernes qui allient rigueur technique, design réfléchi et expériences utiles.",
+      introduction: "Je conçois et améliore des sites en privilégiant l’expérience utilisateur et les objectifs d’affaires.",
       viewWork: "Voir mes projets",
       contact: "Me contacter",
       visualLabel: "Composition abstraite évoquant des expériences numériques connectées",
@@ -174,10 +175,9 @@ export const translations = {
     },
     projects: {
       section: "Projets sélectionnés",
-      title: "Mes projets",
-      accent: "que j’ai développés.",
-      introduction:
-        "Des sites clairs, conçus pour les entreprises et leurs clients.",
+      title: "Projets",
+      accent: "web sélectionnés.",
+      introduction: "Une sélection de sites réalisés pour des entreprises de différents secteurs.",
       work: "PROJETS",
       progress: "en cours",
       artLabel: "PROJETS / PORTFOLIO",
@@ -193,22 +193,22 @@ export const translations = {
       technologies: "Technologies utilisées",
     },
     about: {
-      section: "Quelques mots sur moi",
-      title: "J’apporte ma curiosité",
-      accent: "à chaque projet.",
+      section: "Profil professionnel",
+      title: "Spécialiste web",
+      accent: "et e-commerce.",
       evolution:
-        "J’ai construit mon parcours entre développement web, commerce électronique et expérience numérique. J’aime comprendre le fonctionnement des choses et l’expérience des personnes, puis transformer cette réflexion en solutions utiles. Je continue à apprendre et passe volontiers du détail technique à la vision d’ensemble.",
-      signoff: "J’apporte des perspectives variées, des solutions concrètes et une approche humaine.",
+        "Développeuse web depuis plus de huit ans, je me spécialise en commerce électronique et en expériences numériques. Je conçois et améliore des sites en reliant les choix techniques à l’expérience utilisateur et aux objectifs d’affaires.",
+      signoff: "De la planification à la réalisation, je privilégie des solutions claires et fiables.",
       linkedin: "Voir mon profil LinkedIn",
       experience: "dans le développement web",
       ownership: "Mon portfolio",
     },
     expertise: {
       section: "Expertise",
-      title: "Mes outils.",
-      accent: "En constante évolution.",
+      title: "Développement web",
+      accent: "et e-commerce.",
       introduction:
-        "Du front-end aux systèmes qui le font fonctionner, j’aime penser l’expérience dans son ensemble.",
+        "Une expérience qui couvre le front-end, le back-end, les plateformes e-commerce et la gestion de projets numériques.",
       groups: [
         "Front-end",
         "Back-end",
@@ -220,8 +220,8 @@ export const translations = {
     },
     education: {
       section: "Formation",
-      title: "Ma formation",
-      accent: "au service de mes projets.",
+      title: "Formation",
+      accent: "et perfectionnement.",
       qualifications: {
         mastersPhysicsTechnology: "Maîtrise en physique et technologie",
         bachelorComputerScience: "Baccalauréat en informatique",
@@ -231,10 +231,10 @@ export const translations = {
       },
     },
     qualities: {
-      section: "Ma façon de travailler",
-      title: "Le travail bien fait",
-      accent: "commence par la réflexion.",
-      introduction: "J’apporte ces qualités à mes projets, en complément de mon expérience technique.",
+      section: "Approche professionnelle",
+      title: "Une approche",
+      accent: "rigoureuse et collaborative.",
+      introduction: "Une méthode pragmatique et collaborative pour résoudre les problèmes et livrer un travail de qualité.",
       items: [
         {
           title: "Esprit analytique",
@@ -264,9 +264,9 @@ export const translations = {
     },
     contact: {
       section: "Contact",
-      title: "Un projet en",
-      accent: "tête ?",
-      introduction: "Parlons de votre prochain projet web ou e-commerce.",
+      title: "Parlons de",
+      accent: "votre prochain projet.",
+      introduction: "Échangeons sur votre projet web ou e-commerce.",
       email: "Courriel",
     },
     footer: {
@@ -276,9 +276,9 @@ export const translations = {
   },
   ro: {
     language: "Română",
-    title: "Dezvoltatoare web",
+    title: "Specialistă web și e-commerce",
     description:
-      "Sunt Natalia Jabinschi, dezvoltatoare web cu peste 8 ani de experiență în crearea experiențelor digitale, platformelor de comerț electronic și soluțiilor web.",
+      "Natalia Jabinschi este specialistă în dezvoltare web și e-commerce, cu peste 8 ani de experiență în crearea și îmbunătățirea experiențelor digitale.",
     skip: "Sari la conținut",
     navigation: {
       label: "Navigare principală",
@@ -291,11 +291,12 @@ export const translations = {
       open: "Deschide meniul",
     },
     hero: {
-      role: "Dezvoltatoare web",
+      role: "Specialistă web și e-commerce",
       location: "Canada",
+      title: "Specialistă în dezvoltare",
+      titleAccent: "web și e-commerce",
       subtitle: "Dezvoltare web | E-commerce | Experiență digitală",
-      introduction:
-        "Dezvolt soluții web moderne care îmbină precizia tehnică, designul atent și experiențe utile.",
+      introduction: "Construiesc și îmbunătățesc site-uri, cu accent pe experiența utilizatorilor și obiectivele de business.",
       viewWork: "Vezi proiectele",
       contact: "Contactează-mă",
       visualLabel: "Compoziție abstractă ce reprezintă experiențe digitale conectate",
@@ -310,10 +311,9 @@ export const translations = {
     },
     projects: {
       section: "Proiecte selectate",
-      title: "Câteva proiecte",
-      accent: "dezvoltate de mine.",
-      introduction:
-        "Site-uri clare, create pentru companii și clienții lor.",
+      title: "Proiecte web",
+      accent: "selectate.",
+      introduction: "O selecție de site-uri realizate pentru companii din diverse domenii.",
       work: "PROIECTE",
       progress: "în lucru",
       artLabel: "PROIECTE / PORTOFOLIU",
@@ -329,22 +329,22 @@ export const translations = {
       technologies: "Tehnologii utilizate",
     },
     about: {
-      section: "Câteva cuvinte despre mine",
-      title: "Îmi aduc curiozitatea",
-      accent: "în fiecare proiect.",
+      section: "Profil profesional",
+      title: "Specialistă web",
+      accent: "și e-commerce.",
       evolution:
-        "Mi-am construit parcursul profesional în dezvoltare web, e-commerce și experiențe digitale. Îmi place să înțeleg cum funcționează lucrurile și cum le folosesc oamenii, apoi să transform această perspectivă în soluții digitale utile. Învăț constant și trec cu ușurință de la detaliile tehnice la imaginea de ansamblu.",
-      signoff: "Aduc perspective diferite, soluții practice și o abordare umană.",
+        "Lucrez în dezvoltare web de peste opt ani, cu specializare în e-commerce și experiențe digitale. Construiesc și îmbunătățesc site-uri, îmbinând implementarea tehnică cu experiența utilizatorilor și obiectivele de business.",
+      signoff: "De la planificare la livrare, urmăresc soluții clare și fiabile.",
       linkedin: "Vezi profilul meu LinkedIn",
       experience: "în dezvoltare web",
       ownership: "Portofoliul meu",
     },
     expertise: {
       section: "Expertiză",
-      title: "Setul meu de instrumente",
-      accent: "este în continuă evoluție.",
+      title: "Dezvoltare web",
+      accent: "și e-commerce.",
       introduction:
-        "De la interfață până la sistemele din spatele ei, îmi place să construiesc experiența în ansamblu.",
+        "Experiență în front-end, back-end, platforme e-commerce și coordonarea proiectelor digitale.",
       groups: [
         "Frontend",
         "Backend",
@@ -356,8 +356,8 @@ export const translations = {
     },
     education: {
       section: "Studii",
-      title: "Formarea mea",
-      accent: "stă la baza muncii mele.",
+      title: "Studii",
+      accent: "și formare.",
       qualifications: {
         mastersPhysicsTechnology: "Master în fizică și tehnologie",
         bachelorComputerScience: "Licență în informatică",
@@ -367,10 +367,10 @@ export const translations = {
       },
     },
     qualities: {
-      section: "Cum lucrez",
-      title: "Lucrul bun începe",
-      accent: "cu o idee clară.",
-      introduction: "Aduc aceste calități în proiectele mele, alături de experiența tehnică.",
+      section: "Mod de lucru",
+      title: "Colaborare,",
+      accent: "rigoare și rezultate.",
+      introduction: "O abordare practică și colaborativă pentru a rezolva probleme și a livra muncă de calitate.",
       items: [
         {
           title: "Gândire analitică",
@@ -400,9 +400,9 @@ export const translations = {
     },
     contact: {
       section: "Contact",
-      title: "Ai un proiect",
-      accent: "în minte?",
-      introduction: "Hai să vorbim despre următorul tău proiect web sau e-commerce.",
+      title: "Hai să discutăm",
+      accent: "despre proiectul tău.",
+      introduction: "Contactează-mă pentru a discuta proiectul tău web sau e-commerce.",
       email: "E-mail",
     },
     footer: {
