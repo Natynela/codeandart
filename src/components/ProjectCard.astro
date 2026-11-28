@@ -27,17 +27,22 @@ const projectUrl = project.liveUrl ?? project.repositoryUrl;
       rel="noreferrer"
       aria-label={`${t.projects.openProject}: ${project.title}`}
     >
-      {project.image ? (
-        <img src={project.image} alt={project.imageAlt ?? ""} loading="lazy" />
-      ) : (
-        <div class="project-art" aria-hidden="true">
-          <span class="project-art-index">N° {String(index + 1).padStart(2, "0")}</span>
-          <span class="project-art-shape"></span>
-          <span class="project-art-label">{categoryLabel}</span>
-        </div>
+      <div class="project-art" aria-hidden="true">
+        <span class="project-art-index">N° {String(index + 1).padStart(2, "0")}</span>
+        <span class="project-art-shape"></span>
+        {!project.image && <span class="project-art-label">{categoryLabel}</span>}
+      </div>
+      {project.image && (
+        <img
+          src={project.image.src}
+          alt={project.imageAlt ?? ""}
+          width={project.image.width}
+          height={project.image.height}
+          loading="lazy"
+        />
       )}
     </a>
-    <span class="project-category">{categoryLabel}</span>
+    <span class="project-category">{project.domain[locale]}</span>
   </div>
   <div class="project-details">
     <div>

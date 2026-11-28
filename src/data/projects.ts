@@ -1,3 +1,8 @@
+import type { ImageMetadata } from "astro";
+import clnLogo from "./cln-logo.avif";
+import balanceLogo from "./lo-balance.avif";
+import ecoGlaceLogo from "./logo-eco-glace.webp";
+
 export type ProjectCategory =
   | "E-commerce"
   | "Shopify Development"
@@ -11,13 +16,14 @@ export interface Project {
   contribution: string;
   category: ProjectCategory;
   technologies: string[];
+  domain: Record<"en" | "fr" | "ro", string>;
   translations?: Partial<
     Record<
       "en" | "fr" | "ro",
       { title?: string; description: string; contribution: string }
     >
   >;
-  image?: string;
+  image?: ImageMetadata;
   imageAlt?: string;
   liveUrl?: string;
   repositoryUrl?: string;
@@ -34,6 +40,11 @@ export const projectCategories: ProjectCategory[] = [
 export const projects: Project[] = [
   {
     title: "En Forme au Max",
+    domain: {
+      en: "Fitness & coaching",
+      fr: "Fitness et coaching",
+      ro: "Fitness și antrenament",
+    },
     description:
       "I developed a website for personal training and fitness services, presenting the coach, programs, and client information.",
     contribution:
@@ -54,54 +65,70 @@ export const projects: Project[] = [
           "Am dezvoltat site-ul și am organizat conținutul pentru o experiență clară și accesibilă.",
       },
     },
+    image: balanceLogo,
+    imageAlt: "En Forme au Max",
     liveUrl: "https://balancetotalfitness.com/",
   },
   {
     title: "Eco Glace Nettoyage",
+    domain: {
+      en: "Cryogenic cleaning",
+      fr: "Nettoyage cryogénique",
+      ro: "Curățare criogenică",
+    },
     description:
       "I developed a website presenting cryogenic cleaning services, the process, and the company’s environmental information.",
     contribution:
-      "I developed the website in WordPress and structured its service and informational content.",
-    category: "WordPress Development",
-    technologies: ["WordPress"],
+      "I developed the website with Wix and structured its service and informational content.",
+    category: "UI/UX & Digital Projects",
+    technologies: ["Wix"],
     translations: {
       fr: {
         description:
           "J’ai développé un site qui présente les services de nettoyage cryogénique, le procédé et les informations environnementales de l’entreprise.",
         contribution:
-          "J’ai développé le site avec WordPress et structuré les pages de services et d’information.",
+          "J’ai développé le site avec Wix et structuré les pages de services et d’information.",
       },
       ro: {
         description:
           "Am dezvoltat un site care prezintă serviciile de curățare criogenică, procesul și informațiile companiei despre mediu.",
         contribution:
-          "Am dezvoltat site-ul cu WordPress și am structurat conținutul despre servicii și informații.",
+          "Am dezvoltat site-ul cu Wix și am structurat conținutul despre servicii și informații.",
       },
     },
+    image: ecoGlaceLogo,
+    imageAlt: "Eco Glace Nettoyage",
     liveUrl: "https://ecoglacenettoyage.ca/",
   },
   {
     title: "LMJ Enterprise",
+    domain: {
+      en: "Construction & interiors",
+      fr: "Construction et aménagement intérieur",
+      ro: "Construcții și amenajări interioare",
+    },
     description:
-      "I built this business website as an Astro project, with its content and visual assets maintained in the repository.",
+      "I developed a business website for construction and interior systems, showcasing LMJ’s services and experience.",
     contribution:
-      "I developed the website with Astro. I maintain the source code in my public GitHub repository.",
+      "I developed the website with Wix and organized its content to present the company's services clearly.",
     category: "UI/UX & Digital Projects",
-    technologies: ["Astro"],
+    technologies: ["Wix"],
     translations: {
       fr: {
         description:
-          "J’ai réalisé ce site d’entreprise sous forme de projet Astro, avec le contenu et les ressources visuelles organisés dans le dépôt.",
+          "J’ai développé un site pour une entreprise de construction et d’aménagement intérieur, qui présente les services et l’expérience de LMJ.",
         contribution:
-          "J’ai développé le site avec Astro et j’en maintiens le code source dans mon dépôt GitHub public.",
+          "J’ai développé le site avec Wix et organisé son contenu pour présenter clairement les services de l’entreprise.",
       },
       ro: {
         description:
-          "Am realizat acest site de prezentare ca proiect Astro, cu textul și resursele vizuale organizate în depozit.",
+          "Am dezvoltat un site pentru o companie de construcții și amenajări interioare, prezentând serviciile și experiența LMJ.",
         contribution:
-          "Am dezvoltat site-ul cu Astro și păstrez codul sursă în depozitul meu public GitHub.",
+          "Am dezvoltat site-ul cu Wix și am organizat conținutul pentru a prezenta clar serviciile companiei.",
       },
     },
-    repositoryUrl: "https://github.com/Natynela/cln-enterprise",
+    image: clnLogo,
+    imageAlt: "LMJ Enterprise",
+    liveUrl: "https://www.lmjenterprise.com/",
   },
 ];

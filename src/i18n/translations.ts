@@ -92,6 +92,7 @@ export const translations = {
         "CMS & E-commerce",
         "Digital Experience",
         "Project Management",
+        "AI Tools Integration",
       ],
     },
     education: {
@@ -239,6 +240,7 @@ export const translations = {
         "CMS et e-commerce",
         "Expérience numérique",
         "Gestion de projet",
+        "Intégration d’outils IA",
       ],
     },
     education: {
@@ -386,6 +388,7 @@ export const translations = {
         "CMS și e-commerce",
         "Experiență digitală",
         "Management de proiect",
+        "Integrarea instrumentelor AI",
       ],
     },
     education: {

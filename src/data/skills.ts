@@ -57,4 +57,18 @@ export const skillGroups: SkillGroup[] = [
       },
     },
   },
+  {
+    title: "AI Tools Integration",
+    skills: ["AI APIs", "Prompt Engineering", "Workflow Automation"],
+    translations: {
+      fr: {
+        title: "Intégration d’outils IA",
+        skills: ["API d’IA", "Conception de prompts", "Automatisation des flux"],
+      },
+      ro: {
+        title: "Integrarea instrumentelor AI",
+        skills: ["API-uri AI", "Ingineria prompturilor", "Automatizarea fluxurilor"],
+      },
+    },
+  },
 ];
