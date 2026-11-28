@@ -7,7 +7,7 @@ import SiteHeader from "./SiteHeader.astro";
 import SkillGroup from "./SkillGroup.astro";
 import { education } from "../data/education";
 import { profile } from "../data/profile";
-import { projectCategories, projects } from "../data/projects";
+import { projects } from "../data/projects";
 import { skillGroups } from "../data/skills";
 import { translations, type Locale } from "../i18n/translations";
 
@@ -70,10 +70,6 @@ const localizedEducation = education.map((item) => ({
           <h2 id="projects-title">{t.projects.title}<br /><em>{t.projects.accent}</em></h2>
           <p>{t.projects.introduction}</p>
         </div>
-        <ul class="category-list" aria-label={t.projects.categoriesLabel}>
-          {projectCategories.map((_, index) => <li>{t.projects.categories[index]}</li>)}
-        </ul>
-
         {projects.length > 0 ? (
           <div class="project-grid">
             {projects.map((project, index) => (
@@ -81,7 +77,6 @@ const localizedEducation = education.map((item) => ({
                 project={project}
                 index={index}
                 locale={locale}
-                categoryLabel={t.projects.categories[projectCategories.indexOf(project.category)] ?? project.category}
                 t={t}
               />
             ))}

@@ -6,11 +6,10 @@ interface Props {
   project: Project;
   index: number;
   locale: Locale;
-  categoryLabel: string;
   t: Translation;
 }
 
-const { project, index, locale, categoryLabel, t } = Astro.props;
+const { project, index, locale, t } = Astro.props;
 const localizedProject = {
   ...project,
   ...project.translations?.[locale],
@@ -30,7 +29,7 @@ const projectUrl = project.liveUrl ?? project.repositoryUrl;
       <div class="project-art" aria-hidden="true">
         <span class="project-art-index">N° {String(index + 1).padStart(2, "0")}</span>
         <span class="project-art-shape"></span>
-        {!project.image && <span class="project-art-label">{categoryLabel}</span>}
+        {!project.image && <span class="project-art-label">{project.domain[locale]}</span>}
       </div>
       {project.image && (
         <img
@@ -48,7 +47,6 @@ const projectUrl = project.liveUrl ?? project.repositoryUrl;
     <div>
       <h3>{localizedProject.title}</h3>
       <p>{localizedProject.description}</p>
-      <p class="project-contribution"><strong>{t.projects.myContribution}</strong> {localizedProject.contribution}</p>
     </div>
     <ul class="project-tech" aria-label={t.projects.technologies}>
       {project.technologies.map((technology) => <li>{technology}</li>)}
