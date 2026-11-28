@@ -26,11 +26,9 @@ const projectUrl = project.liveUrl ?? project.repositoryUrl;
       rel="noreferrer"
       aria-label={`${t.projects.openProject}: ${project.title}`}
     >
-      <div class="project-art" aria-hidden="true">
-        <span class="project-art-index">N° {String(index + 1).padStart(2, "0")}</span>
-        <span class="project-art-shape"></span>
-        {!project.image && <span class="project-art-label">{project.domain[locale]}</span>}
-      </div>
+      <span class="project-image-index" aria-hidden="true">
+        N° {String(index + 1).padStart(2, "0")}
+      </span>
       {project.image && (
         <img
           src={project.image.src}
@@ -41,11 +39,11 @@ const projectUrl = project.liveUrl ?? project.repositoryUrl;
         />
       )}
     </a>
-    <span class="project-category">{project.domain[locale]}</span>
   </div>
   <div class="project-details">
     <div>
       <h3>{localizedProject.title}</h3>
+      <span class="project-category">{project.domain[locale]}</span>
       <p>{localizedProject.description}</p>
     </div>
     <ul class="project-tech" aria-label={t.projects.technologies}>
